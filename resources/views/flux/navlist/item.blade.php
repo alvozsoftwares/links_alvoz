@@ -19,10 +19,10 @@
 $square ??= $slot->isEmpty();
 
 // Size-up icons in square/icon-only buttons...
-$iconClasses = Flux::classes($square ? 'size-5!' : 'size-4!');
+$iconClasses = Flux::classes($square ? 'size-6!' : 'size-5!');
 
 $classes = Flux::classes()
-    ->add('h-10 lg:h-8 relative flex items-center gap-3 rounded-lg')
+    ->add('h-10 relative flex items-center gap-3 rounded-lg')
     ->add($square ? 'px-2.5!' : '')
     ->add('py-0 text-start w-full px-3 my-px')
     ->add('text-zinc-500 dark:text-white/80')
@@ -74,7 +74,7 @@ $classes = Flux::classes()
     <?php endif; ?>
 
     <?php if ($slot->isNotEmpty()): ?>
-        <div class="flex-1 text-sm font-medium leading-none whitespace-nowrap [[data-nav-footer]_&]:hidden [[data-nav-sidebar]_[data-nav-footer]_&]:block" data-content>{{ $slot }}</div>
+        <div class="flex-1 text-base font-medium leading-none whitespace-nowrap [[data-nav-footer]_&]:hidden [[data-nav-sidebar]_[data-nav-footer]_&]:block" data-content>{{ $slot }}</div>
     <?php endif; ?>
 
     <?php if (is_string($iconTrailing) && $iconTrailing !== ''): ?>

@@ -1,0 +1,1 @@
+<tr {{ $attributes->merge(['class' => 'odd:bg-white even:bg-gray-50 hover:bg-gray-100 border-b border-gray-50 dark:odd:bg-zinc-600 dark:even:bg-zinc-700 dark:hover:bg-zinc-800 dark:border-zinc-600']) }}>{{ $slot }}</tr>
