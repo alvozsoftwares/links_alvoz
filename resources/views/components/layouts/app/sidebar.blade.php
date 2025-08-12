@@ -22,7 +22,7 @@
                         {{ __('Links') }}
                     </flux:navlist.item>
                   
-                    <flux:navlist.item icon="qr-code" :href="route('qr-code.index')" :current="request()->routeIs('qr-code.*')" wire:navigate>
+                    <flux:navlist.item icon="qr-code" :href="route('gerador')" :current="request()->routeIs('gerador')" wire:navigate>
                         {{ __('QR Code') }}
                     </flux:navlist.item>
                   
