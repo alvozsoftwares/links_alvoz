@@ -11,7 +11,7 @@
             @csrf
             <div class="w-full lg:flex-1 flex flex-wrap gap-4">
                 <flux:input wire:model="descricao" placeholder="Descrição do link" required />
-                <flux:input wire:model="url" placeholder="Descrição do link" required />
+                <flux:input wire:model="url" type="url" placeholder="Descrição do link" required />
 
                 <flux:input.group>
                     <flux:input.group.prefix>{{ env('APP_URL') }}/ir/</flux:input.group.prefix>
@@ -28,9 +28,9 @@
                             @php
                                 $link_acesso = ENV('APP_URL').'/ir/'. $uri;
                             @endphp
-                            {{-- <flux:button class="mt-4" href="{{ route('gerador', ['url' => $link_acesso]) }}">
+                            <flux:button class="mt-4" href="{{ route('gerador', ['url' => $link_acesso]) }}">
                                 Personalizar o QR CODE
-                            </flux:button> --}}
+                            </flux:button>
                         </div>
                     </div>
                 @endif

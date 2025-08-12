@@ -21,13 +21,13 @@ Route::middleware(['auth'])->group(function () {
     Volt::route('usuarios/criar', 'links.form')->name('usuarios.create');
     Volt::route('usuarios/editar/{id}', 'links.form')->name('usuarios.edit');
     
-    Route::redirect('settings', 'settings/profile');
+    Volt::route('gerador', 'gerador-qr-code')->name('gerador');
 
-    Volt::route('settings/profile', 'settings.profile')->name('settings.profile');
-    Volt::route('settings/password', 'settings.password')->name('settings.password');
-    Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
+    Route::redirect('configuracoes', 'settings/profile');
+
+    Volt::route('configuracoes/profile', 'settings.profile')->name('settings.profile');
+    Volt::route('configuracoes/password', 'settings.password')->name('settings.password');
+    Volt::route('configuracoes/appearance', 'settings.appearance')->name('settings.appearance');
 });
-
-// Route::get('/gerador', [QrCodeController::class, 'index'])->middleware(['auth', 'verified'])->name('gerador');
 
 require __DIR__.'/auth.php';
